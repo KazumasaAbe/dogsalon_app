@@ -9,30 +9,12 @@
       >
       </canvas>
     </div>
-    <v-col cols="6">
+    <v-col cols="5">
     <div class="btn-items">
       <div class="btn-item">
       <v-btn 
-        @click="false"
-        label="back"
-      >
-      戻る
-      </v-btn>
-      </div>
-
-      <div class="btn-item">
-      <v-btn 
-        @click="false"
-        label="go"
-      >
-      進む
-      </v-btn>
-      </div>
-
-        <div class="btn-item">
-        <v-btn 
-        @click="false"
-        label="reset"
+        @click="clearCanvas()"
+        label="clear"
       >
       リセット
       </v-btn>
@@ -40,10 +22,29 @@
 
       <div class="btn-item">
       <v-btn 
-        @click="false"
-        label="save"
+        @click="prevCanvas()"
+        label="prev"
       >
-      保存
+      戻る
+      </v-btn>
+      </div>
+
+        <div class="btn-item">
+        <v-btn 
+        @click="nextCanvas()"
+        label="next"
+      >
+      進む
+      </v-btn>
+      </div>
+
+      <div class="btn-item">
+      <v-btn 
+        @click="changeImg"
+        label="change"
+        value="1"
+      >
+      画像変換
       </v-btn>
       </div>
     </div>
@@ -56,28 +57,15 @@
 
 export default {
   data: () => ({
-    mode: '',
-    brushColor: '',
-    defaultMode: 'brush',
-    defaultBrushColor: '#FFFFFF'
   }),
-  mounted: function() {
-    this.init();
-  },
-  methods: {
-    // モードとペンの色を初期状態にする
-    init: function() {
-      this.mode = this.defaultMode;
-      this.brushColor = this.defaultBrushColor;
-    }
-  }
+ 
 }
 </script>
 
 <style scoped>
 canvas {
   position: relative;
-  border:3px solid #000;
+  border:1px solid #000;
 }
 .btn-items {
   display: flex;
