@@ -3,7 +3,10 @@
     <div class="cyan lighten-3 pt-4 pb-2">
       <span class="ml-10">メニュー一覧</span>
     </div>
+  <CallCanvas />
     
+    
+  
     <v-row justify="center" align-content="center" class="text-caption">
       <v-col cols="8">
         <v-card>
@@ -179,10 +182,14 @@
 <script>
 import axios from 'axios';
 import dayjs from 'dayjs'
+import CallCanvas from '../menus/CallCanvas.vue'
 import 'dayjs/locale/ja'
 dayjs.locale(`ja`)
 
 export default {
+  components: {
+    CallCanvas 
+  },
   data() {
     return {
       dialog: false,

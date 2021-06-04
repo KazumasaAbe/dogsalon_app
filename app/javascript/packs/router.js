@@ -32,10 +32,17 @@ export default new VueRouter({
     { path: '/employees/charts/:id(\\d+)',
       name: 'PetDetailPage',
       component: PetDetailPage },
+<<<<<<< HEAD
     { path: '/employees/charts/edit/:id(\\d+)',
       name: 'PetDetailEdit',
       component: PetDetailEdit },
     { path: '/employees/settings/',
+=======
+      { path: '/employees/charts/edit/:id(\\d+)',
+      name: 'PetDetailEdit',
+      component: PetDetailEdit },
+      { path: '/employees/settings/',
+>>>>>>> pet_detail
       component: MenuIndexPage },
   ]
 })

@@ -1,4 +1,4 @@
-<template　v-slot:activator="{ on }">
+<template v-slot:activator="{ on }">
   <v-app id="app" class="top-margin">
     <div class="cyan lighten-3 pt-4 pb-2">
       <span class="ml-10">電子カルテ一覧</span>
@@ -144,6 +144,7 @@ export default {
       search_customer_name: '',
       search_last_visit: '',
       search_menu_name: '',
+      color: 'null',
     }
   },
   mounted() {
